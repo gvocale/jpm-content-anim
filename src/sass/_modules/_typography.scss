@@ -1,0 +1,74 @@
+/* Miller */
+
+@font-face {
+    font-family: 'Amplitude';
+    src: url(../fonts/amplitude/Amplitude-Light.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Amplitude';
+    src: url(../fonts/amplitude/Amplitude-Medium.ttf);
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Amplitude';
+    src: url(../fonts/amplitude/Amplitude-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Icons */
+
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons.eot');
+    src: url('../fonts/icons.eot') format('embedded-opentype'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Type scale "Le Corbusier" taken from http:/lamb.cc/typograph/
+$size01: 0.5rem;
+$size02: 0.6154rem;
+$size03: 0.8077rem;
+$size04: 1rem;
+$size05: 1.3077rem;
+$size06: 1.6154rem;
+$size07: 2.1154rem;
+$size08: 2.6154rem;
+$size09: 3.4231rem;
+$size10: 4.2308rem;
+$size11: 5.5385rem;
+$size12: 6.8462rem;
+$size13: calc($size12 * $size06);
+// Line Heights
+$solid-serif: 1;
+$solid-sans: 1;
+$title-serif: 1.2;
+$title-sans: 1.4;
+$prose-sans: 1.5;
+// Font Stack
+$serif: 'MillerDisplay',
+Times,
+Georgia,
+serif;
+$sans: "Amplitude",
+Helvetica,
+Arial,
+sans-serif;
+$icons: 'icons';
+// Letter Spacing
+$spacing-serif-tight: 0;
+$spacing-serif: 0;
+$spacing-serif-large: 0.015em;
+$spacing-serif-mega: 0.1em;
+$spacing-sans-tight: -0.02em;
+$spacing-sans: 0em;
+$spacing-sans-large: 0.02em;
+$spacing-sans-mega: 0.05em;
+html {
+    font-size: 16px;
+    color: $black;
+}

@@ -1,0 +1,55 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @include grid-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        img,
+        svg,
+        video {
+            // object-position: 50% 50%;
+            // object-fit: cover;
+            background-color: rgba(red, 0.1);
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+            filter: url(#image-grading-brown);
+            -webkit-filter: url(#image-grading-brown);
+        }
+        .video {
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .video-container {
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+    .content {
+        position: relative;
+        @include component-padding;
+        width: 100%;
+        @media screen and ($lg) {
+            width: calc(100% / 12 * 10);
+        }
+        @media screen and ($xl) {
+            width: calc(100% / 12 * 8);
+        }
+        @media screen and ($xxl) {
+            width: calc(100% / 12 * 8);
+        }
+    }
+}

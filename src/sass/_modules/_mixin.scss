@@ -1,0 +1,90 @@
+@mixin grid-padding {
+    padding-left: calc(10vw - 1rem);
+    padding-right: calc(10vw - 1rem);
+}
+
+@mixin grid-margin {
+    margin-left: calc(10vw - 1rem);
+    margin-right: calc(10vw - 1rem);
+}
+
+@mixin grid-margin-left {
+    margin-left: calc(10vw - 1rem);
+}
+
+@mixin grid-margin-right {
+    margin-right: calc(10vw - 1rem);
+}
+
+@mixin padding-top($multiplier: 1) {
+    padding-top: 20vw * $multiplier;
+    @media screen and ($md) {
+        padding-top: 15vw * $multiplier;
+    }
+    @media screen and ($lg) {
+        padding-top: 10vw * $multiplier;
+    }
+}
+
+@mixin padding-bottom($multiplier: 1) {
+    padding-bottom: 20vw * $multiplier;
+    @media screen and ($md) {
+        padding-bottom: 15vw * $multiplier;
+    }
+    @media screen and ($lg) {
+        padding-bottom: 10vw * $multiplier;
+    }
+}
+
+@mixin margin-top($multiplier: 1) {
+    margin-top: 20vw * $multiplier;
+    @media screen and ($md) {
+        margin-top: 15vw * $multiplier;
+    }
+    @media screen and ($lg) {
+        margin-top: 10vw * $multiplier;
+    }
+}
+
+@mixin margin-bottom($multiplier: 1) {
+    margin-bottom: 20vw * $multiplier;
+    @media screen and ($md) {
+        margin-bottom: 15vw * $multiplier;
+    }
+    @media screen and ($lg) {
+        margin-bottom: 10vw * $multiplier;
+    }
+}
+
+@mixin margin-left($multiplier: 1) {
+    margin-left: 10vw * $multiplier;
+}
+
+@mixin margin-right($multiplier: 1) {
+    margin-right: 10vw * $multiplier;
+}
+
+@mixin padding-left($multiplier: 1) {
+    padding-left: 10vw * $multiplier;
+}
+
+@mixin padding-right($multiplier: 1) {
+    padding-right: 10vw * $multiplier;
+}
+
+@mixin component-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@mixin component-margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@mixin ligatures {
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "kern";
+    font-kerning: normal;
+}

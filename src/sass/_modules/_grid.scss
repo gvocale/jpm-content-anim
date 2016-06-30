@@ -1,5 +1,93 @@
+$medium-breakpoint: 768;
+$large-breakpoint: 992;
+$x-large-breakpoint: 1200;
+$xx-large-breakpoint: 1600;
+$md: "min-width: #{$medium-breakpoint}px";
+$lg: "min-width: #{$large-breakpoint}px";
+$xl: "min-width: #{$x-large-breakpoint}px";
+$xxl: "min-width: #{$xx-large-breakpoint}px";
 body {
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 0vw;
+    font-size: 16px;
+    // overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$gridLine: hsla(100, 100%, 40%, 0.1);
+.overlay-grid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    user-select: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    @include grid-padding;
+    box-sizing: border-box;
+    &:after {
+        content: "$sm";
+        position: fixed;
+        display: block;
+        background-color: $gridLine;
+        width: 4em;
+        height: 4em;
+        font-family: $sans;
+        font-size: $size03;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        @media screen and ($md) {
+            content: "$md";
+        }
+        @media screen and ($lg) {
+            content: "$lg";
+        }
+        @media screen and ($xl) {
+            content: "$xl";
+        }
+        @media screen and ($xxl) {
+            content: "$xxl";
+        }
+    }
+    .col {
+        @include component-margin;
+        box-shadow: inset 1px 0 0 0 rgba($brown, 0.05), inset -1px 0 0 0 rgba($brown, 0.05), -1rem 0 0 0 rgba($brown, 0.02), 1rem 0 0 0 rgba($brown, 0.02);
+        width: 100%;
+        background-color: rgba($black, 0.015);
+        height: 100%;
+        display: none;
+        position: relative;
+        @for $i from 1 through 4 {
+            &:nth-of-type(#{$i}) {
+                display: block;
+            }
+        }
+        @media screen and ($md) {
+            @for $i from 5 through 6 {
+                &:nth-of-type(#{$i}) {
+                    display: block;
+                }
+            }
+        }
+        @media screen and ($lg) {
+            @for $i from 7 through 12 {
+                &:nth-of-type(#{$i}) {
+                    display: block;
+                }
+            }
+        }
+    }
 }

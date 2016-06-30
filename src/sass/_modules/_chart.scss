@@ -1,0 +1,6 @@
+.chart {
+	width: 100vw;
+	min-height: 50vw;
+	background-color: rgba($black, 0.5);
+	@include margin-bottom;
+}

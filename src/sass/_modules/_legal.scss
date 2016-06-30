@@ -1,0 +1,47 @@
+.legal-extended {
+    @include grid-padding;
+    font-family: $sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include padding-bottom;
+    .content {
+        @include component-margin;
+        width: 100%;
+        @media screen and ($xl) {
+            width: calc(100% / 12 * 8);
+        }
+        @media screen and ($xxl) {
+            width: calc(100% / 12 * 6);
+        }
+    }
+    .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        margin-bottom: 1em;
+    }
+    .headline {
+        font-size: $size03;
+        font-weight: 400;
+        margin-bottom: 1em;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1em;
+        @media screen and ($xl) {
+            font-size: $size04;
+        }
+        @media screen and ($xxl) {
+            font-size: $size05;
+        }
+    }
+    p {
+        font-size: $size04;
+        line-height: 1.7;
+        font-weight: 200;
+        margin-bottom: 1em;
+    }
+    p + .headline {
+        margin-top: 3em;
+    }
+
+}
