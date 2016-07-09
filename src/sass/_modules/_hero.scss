@@ -52,4 +52,41 @@
             width: calc(100% / 12 * 8);
         }
     }
+    .eyebrow {
+        font-family: $display;
+        font-size: $size04;
+        font-weight: 200;
+        margin-bottom: 1em;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        @media screen and ($xxl) {
+            font-size: $size05;
+        }
+    }
+    .headline {
+        font-size: $size09;
+        font-family: $display;
+        font-weight: 200;
+        margin-bottom: 1em;
+        line-height: 1.1;
+        max-width: 9em;
+        letter-spacing: -0.02em;
+        @media screen and ($xl) {
+            font-size: $size09;
+        }
+        @media screen and ($xxl) {
+            font-size: $size11;
+        }
+    }
+    .subhead {
+        font-family: $display;
+        font-size: $size04;
+        font-weight: 200;
+        margin-bottom: 1em;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        @media screen and ($xxl) {
+            font-size: $size06;
+        }
+    }
 }

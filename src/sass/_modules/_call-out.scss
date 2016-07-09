@@ -1,0 +1,43 @@
+.call-out {
+    @include grid-padding;
+    @include margin-bottom;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .background {
+        margin-left: calc(-10vw - 1rem);
+        width: calc((100% / 12 * 6) + 10vw + 1rem);
+        background-color: rgba($brown, 0.05);
+        display: black;
+        &:after {
+            content: "";
+            padding-bottom: 100%;
+            width: 100%;
+            display: block;
+        }
+    }
+    .content {
+        @include component-padding;
+        width: calc(100% / 12 * 4);
+        margin-left: calc(100% / 12 * 1);
+        // @media screen and ($lg) {
+        //     width: calc(100% / 12 * 10);
+        // }
+        // @media screen and ($xl) {
+        //     width: calc(100% / 12 * 8);
+        // }
+        // @media screen and ($xxl) {
+        //     width: calc(100% / 12 * 6);
+        // }
+    }
+    .h4 {
+        font-size: $size10;
+        font-weight: 200;
+        margin-bottom: 1em;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        // @media screen and ($xxl) {
+        //     font-size: $size07;
+        // }
+    }
+}

@@ -1,5 +1,5 @@
 .article {
-    font-family: $sans;
+    font-family: $body;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +19,9 @@
     .content {
         @include component-padding;
         width: 100%;
+        @media screen and ($lg) {
+            width: calc(100% / 12 * 10);
+        }
         @media screen and ($xl) {
             width: calc(100% / 12 * 8);
         }
@@ -26,26 +29,70 @@
             width: calc(100% / 12 * 6);
         }
     }
-    .h1 {
+}
+
+.h1 {
+    font-size: $size09;
+    font-family: $display;
+    font-weight: 200;
+    margin-bottom: 1em;
+    line-height: 1.1;
+    max-width: 9em;
+    letter-spacing: -0.02em;
+    @media screen and ($xl) {
         font-size: $size09;
-        font-weight: 200;
-        margin-bottom: 1em;
-        line-height: 1.1;
-        max-width: 9em;
-        letter-spacing: -0.02em;
-        @media screen and ($xl) {
-            font-size: $size09;
-        }
-        @media screen and ($xxl) {
-            font-size: $size10;
-        }
     }
-    p {
-        font-size: $size04;
-        line-height: 1.7;
-        font-weight: 200;
-        @media screen and ($xxl) {
-            font-size: $size05;
-        }
+    @media screen and ($xxl) {
+        font-size: $size10;
     }
+}
+
+.h2 {
+    font-size: $size06;
+    font-family: $display;
+    font-weight: 400;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    @media screen and ($xxl) {
+        font-size: $size07;
+    }
+}
+
+.h3 {
+    font-size: $size06;
+    font-family: $display;
+    font-weight: 400;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    @media screen and ($xxl) {
+        font-size: $size07;
+    }
+}
+
+.h4 {
+    font-size: $size06;
+    font-family: $display;
+    font-weight: 400;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    @media screen and ($xxl) {
+        font-size: $size07;
+    }
+}
+
+.p {
+    font-size: $size05;
+    font-family: $body;
+    line-height: 1.7;
+    font-weight: 400;
+    @media screen and ($xxl) {
+        font-size: $size06;
+    }
+}
+.p + .h3,
+.p + .h4 {
+    @include margin-top(0.5);
 }

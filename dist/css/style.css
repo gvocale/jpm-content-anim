@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -85,7 +86,7 @@ body {
     background-color: rgba(68, 204, 0, 0.1);
     width: 4em;
     height: 4em;
-    font-family: "Amplitude", Helvetica, Arial, sans-serif;
+    font-family: "Miller", Times, Georgia, serif;
     font-size: 0.8077rem;
     display: -ms-flexbox;
     display: flex;
@@ -164,6 +165,25 @@ body {
   font-style: normal;
   font-weight: 400; }
 
+/* Celeste */
+@font-face {
+  font-family: 'Miller';
+  src: url(../fonts/harriet/Miller-TextItalic.otf);
+  font-style: italic;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Miller';
+  src: url(../fonts/harriet/HarrietText-Regular.otf);
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Miller';
+  src: url(../fonts/harriet/Miller-TextBold.otf);
+  font-style: normal;
+  font-weight: 600; }
+
 /* Icons */
 @font-face {
   font-family: 'icons';
@@ -177,7 +197,7 @@ html {
   color: #1a1a1a; }
 
 .article {
-  font-family: "Amplitude", Helvetica, Arial, sans-serif;
+  font-family: "Miller", Times, Georgia, serif;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -209,32 +229,84 @@ html {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%; }
+    @media screen and (min-width: 992px) {
+      .body-copy .content {
+        width: calc(100% / 12 * 10); } }
     @media screen and (min-width: 1200px) {
       .body-copy .content {
         width: calc(100% / 12 * 8); } }
     @media screen and (min-width: 1600px) {
       .body-copy .content {
         width: calc(100% / 12 * 6); } }
-  .body-copy .h1 {
-    font-size: 3.4231rem;
-    font-weight: 200;
-    margin-bottom: 1em;
-    line-height: 1.1;
-    max-width: 9em;
-    letter-spacing: -0.02em; }
-    @media screen and (min-width: 1200px) {
-      .body-copy .h1 {
-        font-size: 3.4231rem; } }
-    @media screen and (min-width: 1600px) {
-      .body-copy .h1 {
-        font-size: 4.2308rem; } }
-  .body-copy p {
-    font-size: 1rem;
-    line-height: 1.7;
-    font-weight: 200; }
-    @media screen and (min-width: 1600px) {
-      .body-copy p {
-        font-size: 1.3077rem; } }
+
+.h1 {
+  font-size: 3.4231rem;
+  font-family: "Amplitude", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin-bottom: 1em;
+  line-height: 1.1;
+  max-width: 9em;
+  letter-spacing: -0.02em; }
+  @media screen and (min-width: 1200px) {
+    .h1 {
+      font-size: 3.4231rem; } }
+  @media screen and (min-width: 1600px) {
+    .h1 {
+      font-size: 4.2308rem; } }
+
+.h2 {
+  font-size: 1.6154rem;
+  font-family: "Amplitude", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.02em; }
+  @media screen and (min-width: 1600px) {
+    .h2 {
+      font-size: 2.1154rem; } }
+
+.h3 {
+  font-size: 1.6154rem;
+  font-family: "Amplitude", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.02em; }
+  @media screen and (min-width: 1600px) {
+    .h3 {
+      font-size: 2.1154rem; } }
+
+.h4 {
+  font-size: 1.6154rem;
+  font-family: "Amplitude", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 1em;
+  line-height: 1.5;
+  letter-spacing: -0.02em; }
+  @media screen and (min-width: 1600px) {
+    .h4 {
+      font-size: 2.1154rem; } }
+
+.p {
+  font-size: 1.3077rem;
+  font-family: "Miller", Times, Georgia, serif;
+  line-height: 1.7;
+  font-weight: 400; }
+  @media screen and (min-width: 1600px) {
+    .p {
+      font-size: 1.6154rem; } }
+
+.p + .h3,
+.p + .h4 {
+  margin-top: 10vw; }
+  @media screen and (min-width: 768px) {
+    .p + .h3,
+    .p + .h4 {
+      margin-top: 7.5vw; } }
+  @media screen and (min-width: 992px) {
+    .p + .h3,
+    .p + .h4 {
+      margin-top: 5vw; } }
 
 .authors {
   width: 100%;
@@ -328,6 +400,44 @@ html {
       .authors .role {
         font-size: 1.3077rem; } }
 
+.call-out {
+  padding-left: calc(10vw - 1rem);
+  padding-right: calc(10vw - 1rem);
+  margin-bottom: 20vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .call-out {
+      margin-bottom: 15vw; } }
+  @media screen and (min-width: 992px) {
+    .call-out {
+      margin-bottom: 10vw; } }
+  .call-out .background {
+    margin-left: calc(-10vw - 1rem);
+    width: calc((100% / 12 * 6) + 10vw + 1rem);
+    background-color: rgba(49, 0, 8, 0.05);
+    display: black; }
+    .call-out .background:after {
+      content: "";
+      padding-bottom: 100%;
+      width: 100%;
+      display: block; }
+  .call-out .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: calc(100% / 12 * 4);
+    margin-left: calc(100% / 12 * 1); }
+  .call-out .h4 {
+    font-size: 4.2308rem;
+    font-weight: 200;
+    margin-bottom: 1em;
+    line-height: 1.1;
+    letter-spacing: -0.02em; }
+
 .chart {
   width: 100vw;
   min-height: 50vw;
@@ -393,11 +503,112 @@ html {
     @media screen and (min-width: 1600px) {
       .hero .content {
         width: calc(100% / 12 * 8); } }
+  .hero .eyebrow {
+    font-family: "Amplitude", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 1em;
+    line-height: 1;
+    letter-spacing: 0.1em; }
+    @media screen and (min-width: 1600px) {
+      .hero .eyebrow {
+        font-size: 1.3077rem; } }
+  .hero .headline {
+    font-size: 3.4231rem;
+    font-family: "Amplitude", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    margin-bottom: 1em;
+    line-height: 1.1;
+    max-width: 9em;
+    letter-spacing: -0.02em; }
+    @media screen and (min-width: 1200px) {
+      .hero .headline {
+        font-size: 3.4231rem; } }
+    @media screen and (min-width: 1600px) {
+      .hero .headline {
+        font-size: 5.5385rem; } }
+  .hero .subhead {
+    font-family: "Amplitude", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 1em;
+    line-height: 1;
+    letter-spacing: 0.1em; }
+    @media screen and (min-width: 1600px) {
+      .hero .subhead {
+        font-size: 1.6154rem; } }
+
+.highlight {
+  padding-left: calc(10vw - 1rem);
+  padding-right: calc(10vw - 1rem);
+  margin-bottom: 20vw;
+  margin-top: 20vw;
+  margin-bottom: 20vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .highlight {
+      margin-bottom: 15vw; } }
+  @media screen and (min-width: 992px) {
+    .highlight {
+      margin-bottom: 10vw; } }
+  @media screen and (min-width: 768px) {
+    .highlight {
+      margin-top: 15vw; } }
+  @media screen and (min-width: 992px) {
+    .highlight {
+      margin-top: 10vw; } }
+  @media screen and (min-width: 768px) {
+    .highlight {
+      margin-bottom: 15vw; } }
+  @media screen and (min-width: 992px) {
+    .highlight {
+      margin-bottom: 10vw; } }
+  .highlight .content.ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type: none;
+    line-height: 1.4; }
+    .highlight .content.ul .li {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: calc(100% / 12 * 3);
+      font-family: "Amplitude", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 200;
+      margin-bottom: 1em;
+      line-height: 1;
+      margin-left: 1em;
+      position: relative;
+      display: table;
+      margin-bottom: 1em; }
+      .highlight .content.ul .li:last-child {
+        margin-bottom: 0; }
+      @media screen and (min-width: 1600px) {
+        .highlight .content.ul .li {
+          font-size: 1.6154rem; } }
+      .highlight .content.ul .li:before {
+        content: "■";
+        color: #310008;
+        font-size: 0.6em;
+        transform: translateY(-0.2em);
+        display: table-cell;
+        width: 1.8em; }
 
 .legal-extended {
   padding-left: calc(10vw - 1rem);
   padding-right: calc(10vw - 1rem);
-  font-family: "Amplitude", Helvetica, Arial, sans-serif;
+  font-family: "Miller", Times, Georgia, serif;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;

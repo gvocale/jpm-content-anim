@@ -1,0 +1,47 @@
+.highlight {
+    @include grid-padding;
+    @include margin-bottom;
+    @include margin-top;
+    @include margin-bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content.ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        list-style-type: none;
+        line-height: 1.4;
+
+
+
+        .li {
+            @include component-padding;
+            width: calc(100% / 12 * 3);
+            font-family: $display;
+            font-size: $size04;
+            font-weight: 200;
+            margin-bottom: 1em;
+            line-height: 1;
+            margin-left: 1em;
+                        position: relative;
+            display: table;
+            margin-bottom: 1em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media screen and ($xxl) {
+                font-size: $size06;
+            }
+            &:before {
+                content: "■";
+                color: $brown;
+                font-size: 0.6em;
+                transform: translateY(-0.2em);
+                display: table-cell;
+                width: 1.8em;
+            }
+        }
+    }
+}
