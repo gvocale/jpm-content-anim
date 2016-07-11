@@ -446,7 +446,7 @@ html {
   .chart .chart-1 {
     max-height: 60vh; }
 
-.chart-1-example {
+.chart-1.example {
   padding-top: 10vw;
   padding-bottom: 10vw;
   margin-bottom: 20vw;
@@ -460,24 +460,24 @@ html {
   flex-wrap: nowrap;
   padding: 1rem; }
   @media screen and (min-width: 768px) {
-    .chart-1-example {
+    .chart-1.example {
       padding-top: 7.5vw; } }
   @media screen and (min-width: 992px) {
-    .chart-1-example {
+    .chart-1.example {
       padding-top: 5vw; } }
   @media screen and (min-width: 768px) {
-    .chart-1-example {
+    .chart-1.example {
       padding-bottom: 7.5vw; } }
   @media screen and (min-width: 992px) {
-    .chart-1-example {
+    .chart-1.example {
       padding-bottom: 5vw; } }
   @media screen and (min-width: 768px) {
-    .chart-1-example {
+    .chart-1.example {
       margin-bottom: 15vw; } }
   @media screen and (min-width: 992px) {
-    .chart-1-example {
+    .chart-1.example {
       margin-bottom: 10vw; } }
-  .chart-1-example .link {
+  .chart-1.example .link {
     font-size: 1rem;
     font-family: "Amplitude", Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -488,35 +488,52 @@ html {
     display: block;
     padding-top: 1em; }
     @media screen and (min-width: 1600px) {
-      .chart-1-example .link {
+      .chart-1.example .link {
         font-size: 1.3077rem; } }
-    .chart-1-example .link .technology {
+    .chart-1.example .link .technology {
       margin-left: 1em;
       font-size: 0.8077rem;
       color: rgba(26, 26, 26, 0.5); }
       @media screen and (min-width: 1600px) {
-        .chart-1-example .link .technology {
+        .chart-1.example .link .technology {
           font-size: 1rem; } }
-  .chart-1-example .example {
+  .chart-1.example .example {
     width: calc(100% / 3);
     padding: 1rem; }
-    .chart-1-example .example:nth-child(1) .image {
+    .chart-1.example .example:nth-child(1) .image {
       border: 1px solid rgba(26, 26, 26, 0.2); }
-  .chart-1-example .image {
+  .chart-1.example .image {
     position: relative;
     width: 100%; }
-    .chart-1-example .image:after {
+    .chart-1.example .image:after {
       content: "";
       position: relative;
       padding-top: calc(100% / 16 * 9);
       width: 100%;
       display: block; }
-    .chart-1-example .image img {
+    .chart-1.example .image img {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
+
+.footer {
+  width: 100%;
+  position: relative;
+  background-color: #310008; }
+  .footer:after {
+    content: "";
+    position: relative;
+    padding-top: calc(100% / 5);
+    width: 100%;
+    display: block; }
+  .footer .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: lighten; }
 
 .hero {
   width: 100%;

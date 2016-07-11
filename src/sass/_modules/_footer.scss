@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    position: relative;
+    background-color: $brown;
+    &:after {
+        content: "";
+        position: relative;
+        padding-top: calc(100% / 5);
+        width: 100%;
+        display: block;
+    }
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: lighten;
+    }
+}
